@@ -1,0 +1,140 @@
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Light-grayish-blue);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1110px;
+    margin: 40px;
+    row-gap: 24px;
+    column-gap: 30px;
+}
+
+.card-person{
+    padding:30px;
+    border-radius:10px;
+    box-shadow: 40px 60px 50px -47px rgb(72 85 106 / 25%);
+}
+
+.img-profile{
+    border-radius: 50%;
+    border: 2px solid hsl(263deg 100% 75%);
+    margin-right: 15px;
+    width: 40px;
+}
+
+.heading-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.heading-name {
+
+}
+.person-name{
+    font-weight:500;
+    font-size:15px;
+}
+
+.verified{
+    opacity:0.5;
+    font-weight:400;
+}
+
+.contain h2{
+    margin-bottom: 15px;
+}
+
+.card-person.daniel{
+    background-color:var(--Moderate-violet);
+    color: var(--White);
+    grid-column: span 2;
+
+    background-image: url("/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 70px;
+}
+
+.contain p{
+    opacity:0.5;
+}
+
+.card-person.jonathan{
+    background-color:var(--Very-dark-grayish-blue);
+    color: var(--White);
+}
+
+.card-person.jeanette{
+    background-color:var(--White);
+    color: var(--Very-dark-blackish-blue);
+}
+
+.card-person.patrick{
+    background-color:var(--Very-dark-blackish-blue);
+    color: var(--White);
+    grid-column: span 2;
+}
+
+.card-person.kira{
+    background-color:var(--White);
+    color: var(--Very-dark-blackish-blue);
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.card-person.kira .img-profile{
+    border: 0px;
+}
+.card-person.jonathan .img-profile{
+    border: 0px;
+}
+.card-person.jeanette .img-profile{
+    border: 0px;
+}
+
+.attribution{
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        height: 100%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 25px;
+        margin-top: 50px;
+    }
+    .card-person.kira{
+    order: 4;
+    }
+    .card-person.daniel {
+        background-position: top right 20px;
+    }
+  }
